@@ -21,7 +21,7 @@ SpiderHub.Position = UDim2.new(0.00436136872, 0, 0.0355828106, 0)
 SpiderHub.Size = UDim2.new(0, 205, 0, 258)
 
 TextLabel.Parent = SpiderHub
-TextLabel.BackgroundColor3 = Color3.fromRGB(232, 0, 0)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 TextLabel.Position = UDim2.new(-0.00118532032, 0, -0.00358110666, 0)
 TextLabel.Size = UDim2.new(0, 205, 0, 50)
 TextLabel.Font = Enum.Font.Sarpanch
@@ -34,7 +34,7 @@ TextLabel.TextWrapped = true
 
 Noclip.Name = "Noclip"
 Noclip.Parent = SpiderHub
-Noclip.BackgroundColor3 = Color3.fromRGB(232, 0, 0)
+Noclip.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 Noclip.Position = UDim2.new(0.0521996468, 0, 0.369933128, 0)
 Noclip.Size = UDim2.new(0, 81, 0, 46)
 Noclip.Font = Enum.Font.SourceSans
@@ -89,7 +89,7 @@ TextLabel_2.TextWrapped = true
 
 BTOOLS.Name = "B-Tools"
 BTOOLS.Parent = SpiderHub
-BTOOLS.BackgroundColor3 = Color3.fromRGB(232, 0, 0)
+BTOOLS.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 BTOOLS.Position = UDim2.new(0.562677622, 0, 0.369744718, 0)
 BTOOLS.Size = UDim2.new(0, 70, 0, 46)
 BTOOLS.Font = Enum.Font.SourceSans
