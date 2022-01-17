@@ -1,0 +1,239 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SpiderHub", "BloodTheme")
+
+local Tab = Window:NewTab("Movement")
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Speed (C)", "Enables Speed Hold (C)!", function()
+    plr = game:GetService('Players').LocalPlayer
+
+down = true
+
+function onButton1Down(mouse)
+
+    down = true
+
+    while down do
+
+        if not down then break end
+
+        local char = plr.Character
+
+        char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 190
+
+        wait()
+
+    end
+
+end
+
+function onButton1Up(mouse)
+
+    down = false
+
+end
+
+function onSelected(mouse)
+
+    mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
+
+    mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
+
+end
+
+onSelected(game.Players.LocalPlayer:GetMouse())
+
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Click Teleport!", "Enables Click Teleport Dont Go To Far!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sellbladi/Moryph/main/Teleport!", true))()
+end)
+
+Section:NewButton("Noclip", "Enables SpiderHubs Noclip And Btool GUI!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sellbladi/Moryph/main/Noclip%20GUI", true))()
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Spiderman Web-Shooters", "Enables SpiderHubs Noclip And Btool GUI!", function()
+
+    local CoreGui = game:GetService("StarterGui") 
+
+CoreGui:SetCore("SendNotification", {
+   Title = "SpiderHub!",
+    Text = "Hold Q And Click Somewhere To Use Web Shooters!",
+    Duration = 10, 
+})
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ItsDishan/SpidermanScript/main/Spider-Man'), true))()
+end)
+
+local Tab = Window:NewTab("LocalPlayer")
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("No Animations", "Disables Any Animations!", function()
+    while true do
+        local Animate = game.Players.LocalPlayer.Character.Animate
+        Animate.idle.Animation1.AnimationId = "http://ww.roblox.com/asset/?id82841498"
+        Animate.idle.Animation2.AnimationId = "http://ww.roblox.com/asset/?id=2841498"
+        Animate.walk.WalkAnim.AnimationId = "http://ww.roblox.com/asset/?id=6168032"
+        Animate.run.RunAnim.AnimationId = "http://ww.roblox.com/asset/?id=61682"
+        Animate.jump.JumpAnim.AnimationId = "http://ww.roblox.com/asset/?id=13218792"
+        Animate.climb.ClimbAnim.AnimationId = "http://ww.roblox.com/asset/?id083439238"
+        Animate.fall.FallAnim.AnimationId = "http://ww.roblox.com/asset/?id=7079716"
+        game.Players.LocalPlayer.Character.Humanoid.Jump = false
+        wait(1)
+        end
+end)
+
+Section:NewSlider("Field Of View", "Changes Your Field Of View!", 120, 70, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    workspace.CurrentCamera.FieldOfView = 120
+end)
+
+Section:NewButton("Float (B)", "Enables Float Press (B)!", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Sellbladi/Moryph/main/Float'), true))()
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Spam Chat", "Spams Chat Whith EZ!", function()
+    while true do wait(1) 
+
+        local A_1 = "EZ" local A_2 = "All" 
+        local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) end
+end)
+
+Section:NewButton("Trash Talk (K)", "Enables Trash Talk Press (K)!", function()
+    local words = {
+        'son',
+        'seed',
+        'bro why is it so ez',
+        'man so ez',
+        'clown',
+        'sonned',
+        'that was ez',
+        'get better kid',
+        'Ls',
+    }
+    
+    local player = game.Players.LocalPlayer
+    local keybind = 'k'
+    
+    local event = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+    
+    player:GetMouse().KeyDown:connect(function(key)
+        if key == keybind then
+            event:FireServer(words[math.random(#words)], "All")
+        end
+    end)
+    --- this is a talk trash script
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Aimlock (Q)", "Enables Aimlock!", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Project Bullshit", "Enables Project Bullshit!", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/uw2P2fbY", true))()
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Headless", "Enables Headless!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/pro/main/headlessperma'))()
+end)
+
+Section:NewButton("Face Changer", "Enables Face Changer GUI!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/Scripts/main/carlface'))()
+end)
+
+Section:NewButton("Left Korblox", "Enables Left Korblox!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/carlxdd/misc-releases/main/leftkorblox'))()
+end)
+
+
+Section:NewButton("Right Korblox", "Enables Right Korblox!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/pro/main/rightkorbloxperma'))()
+end)
+
+local Section = Tab:NewSection("SpiderHub")
+
+Section:NewButton("Colourful", "Enables Colourful Like Shaders!", function()
+    game:GetService("Lighting").ColorCorrection.Saturation = 1
+end)
+
+Section:NewButton("Chatlogs", "Enables Chat Spy!", function()
+    --This script reveals ALL hidden messages in the default chat
+--chat "/spy" to toggle!
+enabled = true
+--if true will check your messages too
+spyOnMyself = true
+--if true will chat the logs publicly (fun, risky)
+public = false
+--if true will use /me to stand out
+publicItalics = true
+--customize private logs
+privateProperties = {
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+--////////////////////////////////////////////////////////////////
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+--Credit to O Plays on Youtube, go subscribe to him (not my account, just advertising for him, we don't even know eachother lol)
+end)
+
